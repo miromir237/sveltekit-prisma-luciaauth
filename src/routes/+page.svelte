@@ -1,0 +1,29 @@
+<script lang="ts">
+	import type { PageData } from "./$types";
+
+	export let data: PageData;
+</script>
+
+<div class="hero min-h-screen" style="background-image: url(https://placeimg.com/640/480/tech);">
+    <div class="hero-overlay bg-opacity-60"></div>
+    <div class="hero-content text-center text-neutral-content">
+      <div class="max-w-md">
+        {#if data.user}
+        <h1 class="mb-5 text-5xl font-bold">Hello {data.user.username}</h1>
+        {:else}
+        <h1 class="mb-5 text-5xl font-bold">Hello there.</h1>
+        {/if}
+        <p class="mb-5">Thanks for stopping by.</p>
+        <p class="mb-5">This is just a template. Startup building your webpage with 
+          <a href="https://tailwindcss.com/docs/installation" class="link">TailwindCSS</a> and <a href="https://daisyui.com/" class="link">DaisyUI</a>.
+        </p>
+      </div>
+    </div>
+</div>
+
+
+<style lang="postcss">
+    :global(html) {
+        background-color: theme(colors.gray.100);
+    }
+</style>
