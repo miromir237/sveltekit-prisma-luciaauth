@@ -14,7 +14,7 @@
         <h1 class="mb-5 text-5xl font-bold">Hello there.</h1>
         {/if}
         <p class="mb-5">Thanks for stopping by.</p>
-        <p class="mb-5">This is just a template. Startup building your webpage with 
+        <p class="mb-5">This is just a template. Start building your webpage with 
           <a href="https://tailwindcss.com/docs/installation" class="link">TailwindCSS</a> and <a href="https://daisyui.com/" class="link">DaisyUI</a>.
         </p>
       </div>
