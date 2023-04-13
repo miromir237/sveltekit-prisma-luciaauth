@@ -82,7 +82,7 @@ export const actions = {
 			});            
             
             // username already in use
-            //return fail(400, { form });
+            return fail(400, { form });
         }
 
   

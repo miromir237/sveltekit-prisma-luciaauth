@@ -15,14 +15,18 @@ export const actions: Actions = {
 		const username = form.get("username");
 		const password = form.get("password");
 		// check for empty values
-		if (typeof username !== "string" || typeof password !== "string")
+		if (typeof username !== "string" || typeof password !== "string") {	
+			console.log("Invalid credentials");
 			return fail(400);
+		}
+
 		try {
 			const key = await auth.useKey("username", username, password);
 			const session = await auth.createSession(key.userId);
 			locals.auth.setSession(session);
 		} catch {
 			// invalid credentials
+			console.log("Invalid credentials");
 			return fail(400);
 		}
 	}
